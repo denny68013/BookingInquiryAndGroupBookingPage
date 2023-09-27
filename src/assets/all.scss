@@ -1,0 +1,11 @@
+@import 'bootstrap/scss/functions';
+@import './variables';
+@import 'bootstrap/scss/bootstrap';
+
+
+// 元件樣式
+// @import "./home";
+@import './parts';
+@import './ticket.scss';
+@import "./groupBookingCustom.scss";
+@import "./bookingInquiry.scss";

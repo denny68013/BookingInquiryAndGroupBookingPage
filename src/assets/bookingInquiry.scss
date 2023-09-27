@@ -1,0 +1,234 @@
+@mixin tablet() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 415px) {
+    @content;
+  }
+}
+
+// 訂票記錄頁面⬇️
+
+.bookingInquiryTitle {
+  font-size: 3rem;
+  // text-shadow: 0px 2px 13px #153160, 0px 2px 17px #0b1b34;
+  text-shadow: 0em 0em 0.2em rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+.bookingInquiryInput {
+  background-color: transparent;
+  color: white;
+  width: 100%;
+}
+
+.bookingInquiryInput:not(:placeholder-shown) {
+  background-color: transparent;
+  color: white;
+}
+// 訂票記錄頁面
+
+// --------
+
+// 訂票記錄頁面 - 訂單編號⬇️
+.tickeyInquiryTitle {
+  font-size: 2rem;
+}
+
+.bookingInputInquiryOption {
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  @include mobile {
+    font-size: 1.25rem;
+  }
+}
+// 訂票記錄頁面 - 訂單編號
+
+// 訂單明細⬇️
+
+.infoFieldInquiry {
+  border: 0.0625rem solid rgb(214, 214, 214);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  justify-content: center;
+  @include mobile() {
+    border: none;
+    padding: 0;
+  }
+}
+
+.orderListTitle {
+  font-size: 2rem;
+}
+
+.orderContent {
+  padding-bottom: 0.25rem;
+  font-size: 1.25rem;
+}
+
+// 訂單明細
+
+// 入場時間⬇️
+
+.admissionTimeBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0.0625rem solid rgb(214, 214, 214);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+// 入場時間
+
+// 票券明細⬇️
+
+.orderListText {
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 600;
+}
+.orderTicketTotal {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.noticeText {
+  font-size: 1.2rem;
+}
+
+.isRefundText {
+  font-size: 2rem;
+  border: 0.2rem solid #f6c035;
+  background-color: #f6c035;
+  color: #000;
+  padding: 5px;
+  @include mobile() {
+    font-size: 1.5rem;
+    padding: 3px;
+  }
+}
+// 票券明細
+
+// 電子票券⬇️
+
+.qrcode {
+  border: 0.2rem solid rgb(255, 255, 255);
+  background-color: white;
+}
+
+.card,
+.list-group,
+.list-group-item {
+  background-color: #021016;
+  color: white;
+  border: 0.0625rem solid rgb(214, 214, 214);
+}
+
+.accordion-item,
+.accordion-collapse,
+.accordion-body {
+  background-color: #021016;
+  color: white;
+  border: 0.0625rem solid rgb(214, 214, 214);
+}
+
+.accordion-item .accordionTicket {
+  border: 1px solid white;
+  border-bottom: none;
+  background-color: transparent;
+  color: white;
+  /* width: 100%; */
+}
+
+.accordion-header .accordion-button::after,
+.accordion-header .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23ffffff%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e");
+}
+
+.accordion-header {
+  background-color: #021016;
+}
+.accordionTicketDescription {
+  font-size: 1.25rem;
+  // vertical-align: baseline;
+  @include mobile() {
+    font-size: 1rem;
+  }
+}
+
+.accordtionTicketType {
+  font-size: 2rem;
+  @include mobile() {
+    font-size: 1.5rem;
+  }
+}
+
+.form-check-input:checked {
+  background-color: #f6c035;
+}
+
+.refundLabel {
+  font-size: 1rem;
+}
+// 電子票券
+
+// input 通用樣式⬇️
+
+.inputForm {
+  font-size: 2rem;
+  @include mobile() {
+    font-size: 1.5rem;
+  }
+}
+
+// input 通用樣式
+
+//
+
+.refundText {
+  font-size: 14px;
+  line-height: 0;
+}
+.refundModalText {
+  color: #000;
+  font-weight: 700;
+}
+.refundModal {
+  top: 20%;
+}
+
+.notFoundModalText {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 700;
+  top: 20%;
+  border-radius: 0px;
+  width: 100%;
+  @include mobile() {
+    font-size: 1.25rem;
+  }
+}
+
+.modal-dialog .modal-content {
+  border-radius: 0px;
+}
+
+// .line {
+//   height: 0.125rem;
+//   background-color: black;
+// }

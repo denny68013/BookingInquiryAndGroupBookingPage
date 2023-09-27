@@ -1,0 +1,285 @@
+@mixin tablet() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 415px) {
+    @content;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap");
+// @font-face {
+//   font-family: "Microsoft JhengHei";
+//   src: url("./msjh.ttf");
+//   src: url('Ubuntu-RI-webfont.eot?#iefix') format('embedded-opentype'),
+// }
+// body 背景 ⬇️
+
+.ticketPricePageBody,
+.groupBookingBody,
+.bookingInquiryBody {
+  font-family: "Noto Sans TC", sans-serif;
+  // background-color: rgb(0, 0, 0);
+  // background-size: contain;
+  // background-repeat: no-repeat;
+
+  // background-image: url("../../public/images/ocean_background_AI_9.png");
+  /* background: linear-gradient(180deg, #000 7.53%, rgba(0, 0, 0, 0) 100%); */
+  color: rgb(255, 255, 255);
+  // height: 90vh;
+  // width: 1200px;
+  // height: 1200px;
+  // background-size: auto;
+  // width: 100vw;
+}
+.groupBookingBody {
+  height: 100%;
+  padding-bottom: 70px;
+}
+.groupBookingFinBody {
+  font-family: "Noto Sans TC", sans-serif;
+  // background-color: rgb(0, 0, 0);
+  // background-size: contain;
+  // background-repeat: no-repeat;
+
+  // background-image: url("../../public/images/ocean_background_AI_9.png");
+  // /* background: linear-gradient(180deg, #000 7.53%, rgba(0, 0, 0, 0) 100%); */
+  color: rgb(255, 255, 255);
+  // height: 80vh;
+  // background-size: auto;
+}
+
+.ticketPricePageBody {
+  height: 100%;
+  padding-bottom: 70px;
+}
+.bookingInquiryBody.finLoading {
+  height: 100%;
+  padding-bottom: 70px;
+}
+.groupBookingFinText {
+  line-height: 3.2rem;
+}
+// body 背景
+.ticketPricePageContainer {
+  padding-top: calc(75px + 3rem);
+}
+
+.ticketTypeContainer {
+  padding-left: 3rem;
+}
+
+// 團體預約頁面容器 ⬇️
+
+.groupBookingContainer {
+  padding-top: calc(75px + 3rem);
+  @include tablet() {
+    width: 70%;
+  }
+  // background-color: #ffffff50;
+  // box-shadow: 0px 0px 9px #ffffff;
+  // backdrop-filter: blur(5px);
+  // padding: 50px;
+}
+
+// .formContainer {
+//   background-color: #ffffff50;
+//   box-shadow: 0px 0px 9px #ffffff;
+//   backdrop-filter: blur(2.5px);
+//   padding: 50px;
+// }
+.formContainer {
+  padding-left: 3rem;
+  @include mobile() {
+    padding-left: 0px;
+  }
+}
+
+// 團體預約頁面容器
+
+// 團體預約
+
+.selectGroupBookingSession {
+  background-color: transparent;
+  color: white;
+}
+
+.groupBookingNote {
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  height: 150px;
+}
+.sessionBtn {
+  font-size: 1.5rem;
+}
+
+// 隱私同意⬇️
+
+.privacyText {
+  font-size: 0.7rem;
+}
+
+// 隱私同意
+
+// 預約訂票頁面⬇️
+
+.ticketInfoContainer {
+  width: 75%;
+}
+
+.bookingInfoTitle {
+  font-size: 3rem;
+  // text-shadow: 0px 2px 13px #153160, 0px 2px 17px #0b1b34;
+  font-weight: 700;
+  text-shadow: 0em 0em 0.2em rgba(255, 255, 255, 0.5);
+  @include mobile() {
+    font-size: 2rem;
+  }
+}
+.groupBookingInfoTitle {
+  font-size: 3rem;
+  // text-shadow: 0px 2px 13px #153160, 0px 2px 17px #0b1b34;
+  font-weight: 700;
+  text-shadow: 0em 0em 0.2em rgba(255, 255, 255, 0.5);
+  @include mobile() {
+    font-size: 2rem;
+  }
+}
+.groupBookingInfoNotice {
+  font-size: 1rem;
+  text-shadow: 0px 2px 5px #153160, 0px 2px 20px #0b1b34;
+  // text-shadow: 0em 0em 0.1em rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  @include mobile() {
+    font-size: 0.8rem;
+  }
+}
+
+.ticketType,
+.ticketPrice {
+  font-size: 2rem;
+  @include mobile() {
+    font-size: 2rem;
+  }
+}
+.ticketLimit {
+  @include mobile() {
+    font-size: 0.8rem;
+  }
+}
+.groupLimit {
+  font-size: 2rem;
+  @include tablet() {
+    font-size: 2rem;
+  }
+}
+.groupTicket {
+  font-size: 1.2rem;
+}
+
+.groupTicketType {
+  font-weight: bold;
+}
+.groupTicketPriceContainer {
+  @include mobile() {
+    width: 80%;
+  }
+}
+.charityLimitText {
+  @include mobile() {
+    width: 90%;
+  }
+}
+.orderBtn,
+.inquiryBtn {
+  // color: white;
+  font-size: 1.5rem;
+  &:hover {
+    color: rgb(1, 9, 13);
+  }
+}
+
+.inquiryBtn {
+  color: white;
+  font-size: 20px;
+  background-color: transparent;
+}
+// 團體填資料頁面的元件⬇️
+.bookingInquiryInput,
+textarea {
+  @include tablet() {
+    width: 80%;
+  }
+}
+
+.bookingInquiryInput::placeholder,
+.groupBookingNote::placeholder {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.821);
+  font-size: 1.5rem;
+  @include tablet() {
+    text-align: center;
+  }
+}
+.groupBookingNote::placeholder {
+  text-align: left;
+  transform: translateY(105px);
+  @include tablet() {
+    text-align: center;
+  }
+}
+
+.isEmptyText {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+  padding: 5px;
+  text-shadow: 0px 0px 10px rgba(206, 151, 0, 0.85);
+}
+.form-check .form-check-input:checked {
+  background-color: #f6c035;
+  // color: #000;
+}
+
+.ticketInfoContainer {
+  @include tablet() {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .groupBookingContainer {
+    width: 70%;
+  }
+}
+
+.myBG {
+  background-color: #000;
+  .blackBG {
+    // background-repeat: no-repeat;
+    background-image: url("../../public/images/ocean_background_AI_11.png");
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .testContext {
+    position: relative;
+    min-height: 800px;
+  }
+}
+
+.testContext p {
+  color: white;
+}
+
+.dateOption {
+  color: #000;
+  background-color: #ffffff50;
+}
